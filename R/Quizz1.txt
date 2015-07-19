@@ -1,0 +1,16 @@
+
+initial <- read.csv("C:\\Users\\vincent.bolon\\Git\\CourseraDataScientist\\R\\hw1_data.csv", header = TRUE)
+
+tail(initial, 2)
+
+Q17 <- initial[!is.na(initial$Ozone),]
+mean(Q17$Ozone)
+
+Q18 <- initial[initial["Ozone"] > 31 & initial["Temp"] > 90 & !is.na(initial["Ozone"]) & !is.na(initial["Temp"]),]
+mean(Q18$Solar)
+
+Q19 <- initial[initial$Month == 6,]
+mean(Q19$Temp)
+
+Q20 <- initial[initial$Month == 5 & !is.na(initial$Ozone),] 
+max(Q20$Ozone)
